@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Chapter_7_Solution_10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Console.Write("Enter variable type (0 - int, 1 - double, 2 string): ");
+            string intVar = Console.ReadLine();
+
+            switch (intVar)
+            {
+                case ("integer"):
+                    {
+                        //Console.Write("Enter int variable: ");
+                        int iVar = Int32.Parse(Console.ReadLine());
+                        iVar++;
+                        Console.WriteLine(iVar);
+                        break;
+                    }
+                case ("real"):
+                    {
+                        //Console.Write("Enter double variable: ");
+                        double dVar = double.Parse(Console.ReadLine());
+                        dVar++;
+                        Console.WriteLine("{0:F2}",dVar);
+                        break;
+                    }
+                case ("text"):
+                    {
+                        //Console.Write("Enter string variable: ");
+                        string stringVar = Console.ReadLine();
+                        stringVar = stringVar + '*';
+                        Console.WriteLine(stringVar);
+                        break;
+                    }
+                default: Console.WriteLine("Wrong input"); break;
+            }
+        }
+    }
+}
